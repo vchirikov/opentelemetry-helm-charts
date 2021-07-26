@@ -27,5 +27,5 @@ spec:
       {{- $extraSpec := .Values.agentCollector.extraSpec | mustMergeOverwrite (deepCopy .Values.extraSpec) }}
       {{- if $extraSpec }}
       {{- $extraSpec | toYaml | nindent 6}}
-      {{- end}
+      {{- end }}
 {{- end }}
