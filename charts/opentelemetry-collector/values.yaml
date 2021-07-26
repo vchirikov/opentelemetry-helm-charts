@@ -107,6 +107,7 @@ extraEnvs: []
 extraConfigMapMounts: []
 extraHostPathMounts: []
 secretMounts: []
+extraSpec: {}
 
 # Configuration for ports, shared between agentCollector, standaloneCollector and service.
 # Can be overridden here or for agentCollector and standaloneCollector independently.
@@ -139,7 +140,7 @@ ports:
 # Configuration for agent OpenTelemetry Collector daemonset, enabled by default
 agentCollector:
   enabled: true
-
+  extraSpec: {}
   containerLogs:
     enabled: false
 
@@ -209,7 +210,7 @@ agentCollector:
 # Configuration for standalone OpenTelemetry Collector deployment, disabled by default
 standaloneCollector:
   enabled: false
-
+  extraSpec: {}
   replicaCount: 1
 
   resources:
